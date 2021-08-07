@@ -51,9 +51,9 @@ def load_model():
     print(f"Model trained with accuracy: {round(acc, 3)}")
 
     #Generating Explainability File
-    subprocess.call(["jupyter","nbconvert","--to","notebook","--inplace","--execute","dataset/explainable_AI_starter.ipynb"])
-    subprocess.call(["jupyter","nbconvert","dataset/explainable_AI_starter.ipynb","--no-input","--to","html"])
-    print("Explainability file generated")
+    #subprocess.call(["jupyter","nbconvert","--to","notebook","--inplace","--execute","dataset/explainable_AI_starter.ipynb"])
+    #subprocess.call(["jupyter","nbconvert","dataset/explainable_AI_starter.ipynb","--no-input","--to","html"])
+    #print("Explainability file generated")
 
 # function to predict the flower using the model
 def predict(query_data):
