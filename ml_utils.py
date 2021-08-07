@@ -6,8 +6,8 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 import pandas as pd
-import h2o
-from h2o.automl import H2OAutoML
+#import h2o
+#from h2o.automl import H2OAutoML
 from sklearn.pipeline import Pipeline
 import subprocess
 
@@ -51,9 +51,9 @@ def load_model():
     print(f"Model trained with accuracy: {round(acc, 3)}")
 
     #Generating Explainability File
-    # subprocess.call(["jupyter","nbconvert","--to","notebook","--inplace","--execute","dataset/explainable_AI_starter.ipynb"])
-    # subprocess.call(["jupyter","nbconvert","dataset/explainable_AI_starter.ipynb","--no-input","--to","html"])
-    # print("Explainability file generated")
+    subprocess.call(["jupyter","nbconvert","--to","notebook","--inplace","--execute","dataset/explainable_AI_starter.ipynb"])
+    subprocess.call(["jupyter","nbconvert","dataset/explainable_AI_starter.ipynb","--no-input","--to","html"])
+    print("Explainability file generated")
 
 # function to predict the flower using the model
 def predict(query_data):
